@@ -3,6 +3,7 @@ from box.exceptions import BoxValueError
 import yaml
 from CnnClassifier import logger
 import json
+import shutil
 import joblib
 from ensure import ensure_annotations
 from box import ConfigBox
@@ -135,3 +136,13 @@ def decodeImage(imgstring, fileName):
 def encodeImageIntoBase64(croppedImagePath):
     with open(croppedImagePath, "rb") as f:
         return base64.b64encode(f.read())
+    
+
+
+# def copy_model_file(source, destination):
+#         os.makedirs(destination, exist_ok=True)  
+#         try:
+#             shutil.copy(source, destination)
+#             print(f"File copied successfully to '{destination}'!")
+#         except FileNotFoundError:
+#             print(f"Error: File '{source}' not found.")    

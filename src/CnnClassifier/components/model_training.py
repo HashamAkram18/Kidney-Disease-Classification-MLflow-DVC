@@ -3,6 +3,7 @@ import urllib.request as request
 from zipfile import ZipFile
 from pathlib import Path
 import tensorflow as tf
+import shutil
 import time
 from src.CnnClassifier.entity.config_entity import TrainingConfig
 
@@ -83,3 +84,12 @@ class Training:
             path=self.config.trained_model_path,
             model=self.model
         )
+
+
+def copy_model_file(source, destination):
+        os.makedirs(destination, exist_ok=True)  
+        try:
+            shutil.copy(source, destination)
+            print(f"File copied successfully to '{destination}'!")
+        except FileNotFoundError:
+            print(f"Error: File '{source}' not found.")        

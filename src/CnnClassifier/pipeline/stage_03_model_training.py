@@ -1,5 +1,5 @@
 from src.CnnClassifier.config.configuration import ConfigurationManager
-from src.CnnClassifier.components.model_training import Training
+from src.CnnClassifier.components.model_training import Training, copy_model_file
 from CnnClassifier import logger
 
 STAGE_NAME = "Training"
@@ -15,6 +15,8 @@ class ModelTrainingPipeline:
         training.get_base_model()
         training.train_valid_generator()
         training.train()
+        copy_model_file(source="artifacts/training/model.h5", destination="model")
+
 
 
 

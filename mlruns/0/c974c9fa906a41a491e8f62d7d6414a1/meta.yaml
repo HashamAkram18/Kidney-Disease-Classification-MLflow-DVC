@@ -1,0 +1,15 @@
+artifact_uri: file:///G:/Kidney-Disease-Classification-MLflow-DVC/mlruns/0/c974c9fa906a41a491e8f62d7d6414a1/artifacts
+end_time: 1712041166890
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c974c9fa906a41a491e8f62d7d6414a1
+run_name: sedate-ray-73
+run_uuid: c974c9fa906a41a491e8f62d7d6414a1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712041139916
+status: 3
+tags: []
+user_id: Home
