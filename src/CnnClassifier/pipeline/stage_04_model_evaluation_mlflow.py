@@ -16,7 +16,7 @@ class EvaluationPipeline:
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
         # evaluation.save_score()
-        evaluation.log_into_mlflow()
+        # evaluation.log_into_mlflow() operate only during developmet phase for testing experiments
 
 
 
